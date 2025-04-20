@@ -1,0 +1,45 @@
+[package]
+name = "becoming"
+version = "0.1.0"
+authors = ["Angelina for easyA and Polkadot Hackathon"]
+edition = "2021"
+description = "A soul-bound NFT that evolves as users achieve personal milestones"
+license = "MIT"
+
+[dependencies]
+ink = { version = "5.1.1", default-features = false }
+
+scale = { package = "parity-scale-codec", version = "3", default-features = false, features = ["derive"] }
+scale-info = { version = "2.9", default-features = false, features = ["derive"], optional = true }
+
+[lib]
+path = "lib.rs"
+
+[features]
+default = ["std"]
+std = [
+    "ink/std",
+    "scale/std",
+    "scale-info/std",
+]
+ink-as-dependency = []
+
+[profile.release]
+overflow-checks = false
+
+# Add these optimization profiles for ink! contracts
+lto = true
+opt-level = 3
+codegen-units = 1
+panic = "abort"
+
+[profile.dev]
+panic = "abort"
+
+[workspace]
+members = ["."]
+resolver = "2"
+
+# Enable `cargo contract test`
+[workspace.metadata.contract]
+toolchain = "nightly" 

@@ -1,0 +1,7 @@
+# Standard ink! formatting
+max_width = 100
+tab_spaces = 4
+reorder_imports = true
+newline_style = "Unix"
+use_small_heuristics = "Max"
+imports_granularity = "Crate" 

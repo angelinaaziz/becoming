@@ -1,0 +1,61 @@
+name: Contract CI
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'contracts/**'
+  pull_request:
+    branches: [ main ]
+    paths:
+      - 'contracts/**'
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+    
+    - name: Install Rust
+      uses: actions-rs/toolchain@v1
+      with:
+        toolchain: stable
+        profile: minimal
+        components: rustfmt, clippy
+        target: wasm32-unknown-unknown
+        override: true
+    
+    - name: Cache Rust dependencies
+      uses: Swatinem/rust-cache@v2
+      with:
+        workspaces: contracts
+    
+    - name: Install cargo-contract
+      run: cargo install cargo-contract --version 4.0.0 --locked
+    
+    - name: Formatting check
+      working-directory: ./contracts
+      run: cargo fmt --all -- --check
+    
+    - name: Run clippy
+      working-directory: ./contracts
+      run: cargo clippy -- -D warnings
+    
+    - name: Run tests
+      working-directory: ./contracts
+      run: cargo test
+    
+    - name: Build contract
+      working-directory: ./contracts
+      run: cargo contract build --release
+    
+    - name: Upload artifacts
+      uses: actions/upload-artifact@v3
+      with:
+        name: contract-artifacts
+        path: |
+          contracts/target/ink/becoming.wasm
+          contracts/target/ink/becoming.json
+          contracts/target/ink/metadata.json
+        retention-days: 7 

@@ -1,0 +1,13 @@
+[target.wasm32-unknown-unknown]
+# Point to the installed wasm-ld
+linker = "/opt/homebrew/Cellar/lld/20.1.3/bin/wasm-ld"
+rustflags = [
+  "-C", "link-arg=--import-memory",
+  "-C", "opt-level=3",
+  "-C", "debuginfo=0"
+]
+
+[profile.release]
+panic = "abort"
+lto = true
+codegen-units = 1

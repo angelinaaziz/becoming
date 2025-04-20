@@ -1,0 +1,348 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-900 text-white;
+  }
+}
+
+/* Custom animation for avatar evolution */
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px 0 rgba(100, 126, 255, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px 5px rgba(100, 126, 255, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px 0 rgba(100, 126, 255, 0.5);
+  }
+}
+
+.avatar-glow {
+  animation: glow 2s infinite;
+}
+
+/* Animation for milestone completion */
+@keyframes celebrate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.celebrate {
+  animation: celebrate 0.5s ease-in-out;
+}
+
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --primary-color: rgb(151, 71, 255);
+  --primary-glow: rgba(151, 71, 255, 0.5);
+  --secondary-color: rgb(168, 85, 247);
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: #0a0a14;
+  color: #fff;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Modern scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(31, 31, 31, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(151, 71, 255, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(151, 71, 255, 0.5);
+}
+
+/* Web3 cybernetic elements */
+.cyber-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.cyber-line::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+  animation: cyber-line-slide 3s ease-in-out infinite;
+}
+
+@keyframes cyber-line-slide {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Orbital ring animation */
+.orbital-ring {
+  animation: orbital-rotate 12s linear infinite;
+}
+
+@keyframes orbital-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Hexagon background animation */
+.hex-bg {
+  background-image: radial-gradient(
+    hexagon at center,
+    rgba(151, 71, 255, 0.1) 0%,
+    transparent 60%
+  );
+  background-size: 60px 60px;
+  animation: hex-pulse 4s ease-in-out infinite;
+}
+
+@keyframes hex-pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.7; }
+}
+
+/* Text glitch effect for headings */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+.glitch-text::before {
+  left: 2px;
+  text-shadow: -1px 0 var(--primary-glow);
+  clip: rect(44px, 450px, 56px, 0);
+  animation: glitch-anim-1 5s linear infinite alternate-reverse;
+}
+
+.glitch-text::after {
+  left: -2px;
+  text-shadow: 1px 0 var(--primary-glow);
+  clip: rect(44px, 450px, 46px, 0);
+  animation: glitch-anim-2 5s linear infinite alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+  0% { clip: rect(33px, 450px, 68px, 0); }
+  5% { clip: rect(0px, 450px, 99px, 0); }
+  10% { clip: rect(67px, 450px, 91px, 0); }
+  15% { clip: rect(92px, 450px, 60px, 0); }
+  20% { clip: rect(33px, 450px, 4px, 0); }
+  25% { clip: rect(63px, 450px, 87px, 0); }
+  30% { clip: rect(84px, 450px, 21px, 0); }
+  35% { clip: rect(57px, 450px, 17px, 0); }
+  40% { clip: rect(20px, 450px, 54px, 0); }
+  45% { clip: rect(67px, 450px, 46px, 0); }
+  50% { clip: rect(18px, 450px, 68px, 0); }
+  55% { clip: rect(87px, 450px, 89px, 0); }
+  60% { clip: rect(100px, 450px, 42px, 0); }
+  65% { clip: rect(15px, 450px, 9px, 0); }
+  70% { clip: rect(51px, 450px, 85px, 0); }
+  75% { clip: rect(71px, 450px, 1px, 0); }
+  80% { clip: rect(40px, 450px, 23px, 0); }
+  85% { clip: rect(87px, 450px, 53px, 0); }
+  90% { clip: rect(33px, 450px, 5px, 0); }
+  95% { clip: rect(49px, 450px, 52px, 0); }
+  100% { clip: rect(93px, 450px, 86px, 0); }
+}
+
+@keyframes glitch-anim-2 {
+  0% { clip: rect(13px, 450px, 86px, 0); }
+  5% { clip: rect(99px, 450px, 33px, 0); }
+  10% { clip: rect(18px, 450px, 4px, 0); }
+  15% { clip: rect(21px, 450px, 5px, 0); }
+  20% { clip: rect(49px, 450px, 61px, 0); }
+  25% { clip: rect(41px, 450px, 22px, 0); }
+  30% { clip: rect(11px, 450px, 33px, 0); }
+  35% { clip: rect(48px, 450px, 15px, 0); }
+  40% { clip: rect(32px, 450px, 56px, 0); }
+  45% { clip: rect(86px, 450px, 64px, 0); }
+  50% { clip: rect(64px, 450px, 57px, 0); }
+  55% { clip: rect(26px, 450px, 79px, 0); }
+  60% { clip: rect(21px, 450px, 50px, 0); }
+  65% { clip: rect(4px, 450px, 5px, 0); }
+  70% { clip: rect(27px, 450px, 76px, 0); }
+  75% { clip: rect(48px, 450px, 46px, 0); }
+  80% { clip: rect(21px, 450px, 42px, 0); }
+  85% { clip: rect(68px, 450px, 21px, 0); }
+  90% { clip: rect(38px, 450px, 32px, 0); }
+  95% { clip: rect(72px, 450px, 32px, 0); }
+  100% { clip: rect(26px, 450px, 59px, 0); }
+}
+
+/* Futuristic loading animation */
+.loading-dots span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  margin: 0 3px;
+  animation: loading-dots 1.4s ease-in-out infinite;
+}
+
+.loading-dots span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.loading-dots span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loading-dots {
+  0%, 100% {
+    transform: translateY(0);
+    opacity: 0.3;
+  }
+  50% {
+    transform: translateY(-6px);
+    opacity: 1;
+  }
+}
+
+/* Blockchain node connection animation */
+.node-connection {
+  position: relative;
+}
+
+.node-connection::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(to right, transparent, var(--primary-color), transparent);
+  animation: node-pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes node-pulse {
+  0%, 100% {
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* NFT glow effect */
+.nft-glow {
+  box-shadow: 0 0 15px var(--primary-glow);
+  animation: nft-pulse 3s ease-in-out infinite;
+}
+
+@keyframes nft-pulse {
+  0%, 100% {
+    box-shadow: 0 0 15px var(--primary-glow);
+  }
+  50% {
+    box-shadow: 0 0 30px var(--primary-glow);
+  }
+}
+
+/* Gradient text animation */
+.gradient-text {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  background-size: 200% auto;
+  animation: gradient-text-animation 4s linear infinite;
+}
+
+@keyframes gradient-text-animation {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}

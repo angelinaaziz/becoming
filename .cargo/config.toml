@@ -1,0 +1,11 @@
+[target.wasm32-unknown-unknown]
+linker = "rust-lld"
+rustflags = [
+  "-C", "link-arg=-z",
+  "-C", "link-arg=stack-size=65536",
+  "-C", "link-arg=--import-memory",
+]
+
+[unstable]
+build-std = ["core", "alloc"]
+build-std-features = ["panic_immediate_abort"] 
