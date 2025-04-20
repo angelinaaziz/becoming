@@ -11,14 +11,21 @@ echo -e "${YELLOW}Becoming Contract Deployment Script - Paseo Asset Hub${NC}"
 echo "This script will build and deploy the contract to Paseo Asset Hub."
 echo
 
-# Check if seed phrase is provided
-if [ -z "$SEED_PHRASE" ]; then
-  echo -e "${YELLOW}No seed phrase provided. Using Angelina's account //Alice.${NC}"
-  SEED_PHRASE="//Alice"
+# Check if endpoint is provided
+if [ -n "$PASEO_ENDPOINT" ]; then
+  echo -e "${YELLOW}Using provided endpoint: $PASEO_ENDPOINT${NC}"
+else
+  # Default Paseo endpoints
+  PASEO_ENDPOINT="wss://paseo-asset-hub-rpc.polkadot.io"
+  echo -e "${YELLOW}Using default endpoint: $PASEO_ENDPOINT${NC}"
+  echo -e "${YELLOW}Alternative endpoints: wss://asset-hub-paseo-rpc.dwellir.com, wss://paseo-asset-hub-rpc.dwellir.com${NC}"
 fi
 
-# Define Paseo Asset Hub endpoint
-PASEO_ENDPOINT="wss://paseo-asset-hub-rpc.polkadot.io"
+# Check if seed phrase is provided
+if [ -z "$SEED_PHRASE" ]; then
+  echo -e "${YELLOW}No seed phrase provided. Using default account //Alice.${NC}"
+  SEED_PHRASE="//Alice"
+fi
 
 # Navigate to contracts directory
 cd contracts || { echo -e "${RED}Error: contracts directory not found.${NC}"; exit 1; }
@@ -43,6 +50,7 @@ UPLOAD_RESULT=$(cargo contract upload --url "$PASEO_ENDPOINT" --suri "$SEED_PHRA
 if echo "$UPLOAD_RESULT" | grep -q "Error"; then
   echo -e "${RED}Error during contract upload:${NC}"
   echo "$UPLOAD_RESULT"
+  echo -e "${YELLOW}You might want to try an alternative endpoint or check your connection.${NC}"
   exit 1
 fi
 
@@ -86,7 +94,16 @@ echo -e "${GREEN}Contract successfully instantiated at address: $CONTRACT_ADDRES
 cd ../frontend || { echo -e "${RED}Error: frontend directory not found.${NC}"; exit 1; }
 echo "Updating frontend .env file..."
 
-cat > .env << EOL
+if [ -f ".env" ]; then
+    # Update existing .env file
+    sed -i.bak "s/VITE_CONTRACT_ADDRESS=.*/VITE_CONTRACT_ADDRESS=$CONTRACT_ADDRESS/" .env
+    sed -i.bak "s#VITE_WS_PROVIDER=.*#VITE_WS_PROVIDER=$PASEO_ENDPOINT#" .env
+    sed -i.bak "s/VITE_MOCK_MODE=.*/VITE_MOCK_MODE=false/" .env
+    rm -f .env.bak
+    echo -e "${GREEN}Existing .env file updated successfully.${NC}"
+else
+    # Create new .env file
+    cat > .env << EOL
 # Becoming NFT App Configuration
 
 # Contract address
@@ -104,8 +121,8 @@ VITE_DEBUG=true
 # Contract chain name
 VITE_CONTRACTS_CHAIN_NAME=Paseo Asset Hub
 EOL
-
-echo -e "${GREEN}Frontend .env file updated successfully.${NC}"
+    echo -e "${GREEN}New .env file created successfully.${NC}"
+fi
 
 cd ..
 
