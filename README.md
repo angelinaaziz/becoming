@@ -2,10 +2,40 @@
 
 A soul-bound NFT that evolves as you achieve personal milestones.
 
-**Polkadot** · **ink!** · **React** · **Tailwind**
+<p align="center">
+  <a href="https://polkadot.network/" target="_blank">
+    <img alt="Polkadot" src="https://img.shields.io/badge/Polkadot-Black?logo=polkadot&logoColor=white" />
+  </a>&nbsp;
+  <a href="https://use.ink/" target="_blank">
+    <img alt="ink!" src="https://img.shields.io/badge/ink!-Rust-orange?logo=rust" />
+  </a>&nbsp;
+  <a href="https://reactjs.org/" target="_blank">
+    <img alt="React" src="https://img.shields.io/badge/React-17.0.2-61dafb?logo=react&logoColor=white" />
+  </a>&nbsp;
+  <a href="https://tailwindcss.com/" target="_blank">
+    <img alt="Tailwind" src="https://img.shields.io/badge/Tailwind-3.0-38B2AC?logo=tailwindcss&logoColor=white" />
+  </a>
+</p>
 
-[![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen)](https://becoming.vercel.app)
-[![GitHub Repo](https://img.shields.io/badge/Repo-GitHub-blue)](https://github.com/angelinaaziz/becoming)
+## Demo Video of Becoming
+<div>
+    <a href="https://www.loom.com/share/a362f109d0c445eeafa7aa2309b29d39">
+      <p></p>
+    </a>
+    <a href="https://www.loom.com/share/a362f109d0c445eeafa7aa2309b29d39">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/a362f109d0c445eeafa7aa2309b29d39-16a3f69e66dfdf14-full-play.gif">
+    </a>
+  </div>
+
+## Nerdy Technical Video
+<div>
+    <a href="https://www.loom.com/share/f7f0fcbb653444d8aa8a230a97399533">
+      <p></p>
+    </a>
+    <a href="https://www.loom.com/share/f7f0fcbb653444d8aa8a230a97399533">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f7f0fcbb653444d8aa8a230a97399533-eba5bf919e363f76-full-play.gif">
+    </a>
+  </div>
 
 ---
 
@@ -110,25 +140,18 @@ You can also deploy to:
 
 ## 📱 Screenshots
 
-### Journey Page - Track Your Growth
-![Journey Page](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/journey-page.png)
-*Your personal journey dashboard showing your current level, milestone count, and progress tracker.*
-
 ### Mint Page - Begin Your Journey
-![Mint Page](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/mint-page.png)
-*The starting point where users can mint their soul-bound NFT and begin their personal growth journey.*
+![Journey Page](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/journey-page.png)
+*The starting point where users connect their wallet and  can mint their soul-bound NFT and begin their personal growth journey.*
+
 
 ### Add Milestone - Document Your Achievements
-![Add Milestone](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/add-milestone.png)
+![Celebration Page](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/celebration-page.png)
 *Add new milestones with title, description, and verification proof to evolve your avatar.*
 
-### Profile Page - Share Your Journey
+### Profile Page - Track Your Journey
 ![Profile Page](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/profile-page.png)
 *Public profile page showcasing your journey and achievements to inspire others.*
-
-### Celebration Page - Achievement Unlocked
-![Celebration Page](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/celebration-page.png)
-*A celebration animation when you reach a new evolution level in your journey.*
 
 ## 🗺️ Roadmap
 
