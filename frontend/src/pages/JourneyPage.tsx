@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useContract } from '../hooks/useContract';
+import { useContract, STORAGE_KEYS } from '../hooks/useContract';
 import Avatar, { AvatarStage } from '../components/ui/Avatar';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
@@ -62,6 +62,12 @@ const JourneyPage = () => {
       };
     }
   }, [mockMode, selectedAccount]);
+  
+  // Function to load milestones data
+  const loadMilestones = () => {
+    // Call the main data loading function
+    loadData();
+  };
   
   // Load data from blockchain
   const loadData = async () => {
@@ -156,8 +162,8 @@ const JourneyPage = () => {
     } else if (isContractReady && !isConnecting && !selectedAccount) {
       // Contract is ready but no account and not currently connecting
       // Let's check if there's a saved account we can restore
-      const storedAccountAddress = localStorage.getItem('becoming_selected_account');
-      const connected = localStorage.getItem('becoming_wallet_connected') === 'true';
+      const storedAccountAddress = localStorage.getItem(STORAGE_KEYS.SELECTED_ACCOUNT);
+      const connected = localStorage.getItem(STORAGE_KEYS.CONNECTED) === 'true';
       
       if (storedAccountAddress && connected) {
         console.log("JourneyPage: Found stored account, attempting to connect wallet");

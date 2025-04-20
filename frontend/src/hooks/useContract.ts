@@ -7,7 +7,7 @@ import { metadata } from './contract-metadata';
 import confetti from 'canvas-confetti';
 
 // Define storage keys in a consistent way
-const STORAGE_KEYS = {
+export const STORAGE_KEYS = {
   MINTED: 'becoming_nft_minted',
   MINT_DATE: 'becoming_mint_date',
   CONNECTED: 'becoming_wallet_connected',
@@ -37,6 +37,17 @@ export const useContract = () => {
   const [isConnecting, setIsConnecting] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [isContractReady, setIsContractReady] = useState(false);
+  
+  // Initialize minted status from localStorage
+  const [isMinted, setIsMinted] = useState<boolean>(() => {
+    const storedMinted = localStorage.getItem(STORAGE_KEYS.MINTED);
+    return storedMinted === 'true';
+  });
+  
+  // Add a flag to track if we've already checked for mint status
+  const [hasMintCheck, setHasMintCheck] = useState(false);
+  // Tracking if minting is in progress
+  const [isMinting, setIsMinting] = useState(false);
   
   // Helper function for auto-checking connection
   const checkExistingConnection = async () => {
@@ -74,9 +85,10 @@ export const useContract = () => {
     // Store auto-mint preference for development account
     if (enableAutoMint) {
       localStorage.setItem('becoming_dev_auto_mint', 'true');
-      debug('Angelina account auto-mint enabled');
+      debug('Angelina auto-mint enabled');
     } else {
       localStorage.removeItem('becoming_dev_auto_mint');
+      debug('Angelina auto-mint disabled');
     }
      
     // Also remove any milestone data
@@ -178,17 +190,6 @@ export const useContract = () => {
       return () => clearTimeout(timer);
     }
   }, [mockMode, selectedAccount, isMinted, isMinting, hasMintCheck]);
-  
-  // Initialize minted status from localStorage
-  const [isMinted, setIsMinted] = useState<boolean>(() => {
-    const storedMinted = localStorage.getItem(STORAGE_KEYS.MINTED);
-    return storedMinted === 'true';
-  });
-  
-  // Add a flag to track if we've already checked for mint status
-  const [hasMintCheck, setHasMintCheck] = useState(false);
-  // Tracking if minting is in progress
-  const [isMinting, setIsMinting] = useState(false);
 
   // Store selected account in state
   useEffect(() => {
@@ -617,10 +618,10 @@ export const useContract = () => {
     
     if (enable) {
       localStorage.setItem('becoming_dev_auto_mint', 'true');
-      debug('Angelina account auto-mint enabled');
+      debug('Angelina auto-mint enabled');
     } else {
       localStorage.removeItem('becoming_dev_auto_mint');
-      debug('Angelina account auto-mint disabled');
+      debug('Angelina auto-mint disabled');
     }
     return true;
   };
@@ -661,9 +662,9 @@ export const useContract = () => {
         
         if (alreadyMinted && isDevelopmentAccount && !autoMintEnabled) {
           // Development account with auto-mint disabled
-          debug('Angelina account has already minted and auto-mint is not enabled');
+          debug('Angelina has already minted and auto-mint is not enabled');
           setIsMinting(false);
-          throw new Error('Angelina account has already minted. Reset state or enable auto-mint to mint again.');
+          throw new Error('Angelina has already minted. Reset state or enable auto-mint to mint again.');
         }
         
         // If we get here, either:

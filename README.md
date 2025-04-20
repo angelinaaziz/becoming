@@ -13,27 +13,19 @@
   <img src="https://img.shields.io/badge/ink!-121212?style=for-the-badge&logo=parity-substrate&logoColor=white" alt="ink!" />
   <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React" />
   <img src="https://img.shields.io/badge/Tailwind-06B6D4?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="Tailwind" />
-  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="Vercel" />
 </p>
 
 ## 🚀 Demo
 
 <p align="center">
-  <a href="https://becoming-nft.vercel.app" target="_blank">Live Demo</a>
+  <a href="https://github.com/angelinaaziz/becoming" target="_blank">GitHub Repository</a>
 </p>
-
-<!-- 
-To be added once available:
-<p align="center">
-  <img src="frontend/public/demo.gif" alt="Demo of Becoming NFT" width="80%" />
-</p>
--->
 
 ## 🌟 The Problem & Solution
 
 ### Problem
 
-Personal growth and achievements often go unrecorded, making it hard to visualize progress and document significant milestones in one's journey. Traditional methods lack the permanence and visual evolution that truly showcase personal development.
+Personal growth and achievements often go unrecorded, making it hard to visualise progress and document significant milestones in one's journey. Traditional methods lack the permanence and visual evolution that truly showcase personal development.
 
 ### Solution
 
@@ -42,7 +34,7 @@ Personal growth and achievements often go unrecorded, making it hard to visualiz
 - Are tied to your identity (non-transferable)
 - Evolve visually as you add milestones
 - Create a permanent, verifiable record of achievements
-- Build a community where achievements are recognized and celebrated
+- Build a community where achievements are recognised and celebrated
 
 ## ✨ Features
 
@@ -63,20 +55,13 @@ Personal growth and achievements often go unrecorded, making it hard to visualiz
 
 - **🔒 Soul-bound NFT**: Non-transferable, tied to your identity
 - **🎨 Visual Evolution**: Your avatar evolves through four distinct stages
-- **📚 Milestone Management**: Add, categorize, and display your achievements
+- **📚 Milestone Management**: Add, categorise, and display your achievements
 - **🔍 Verifiable Proofs**: Link evidence of achievements with blockchain timestamping
 - **🎉 Achievement Sharing**: Share milestones with your community
 - **💰 Tipping System**: Receive tips for inspiring achievements
 - **👥 Public Profiles**: View others' journeys for inspiration
 
 ## 🏗️ Architecture
-
-<!-- 
-To be added once available:
-<p align="center">
-  <img src="frontend/public/architecture.png" alt="Becoming Architecture" width="80%" />
-</p>
--->
 
 **Becoming** is built on a modern tech stack:
 
@@ -122,16 +107,25 @@ npm run dev
 npm run build
 ```
 
-## 📱 Screenshots
+### Hosting the Frontend
 
-<!-- 
-To be added once available:
-<p align="center">
-  <img src="frontend/public/screenshot1.png" alt="Home Page" width="45%" />
-  &nbsp; &nbsp;
-  <img src="frontend/public/screenshot2.png" alt="Journey Page" width="45%" />
-</p>
--->
+After building the frontend, you can serve it using any static hosting solution:
+
+```bash
+# Install a local server if needed
+npm install -g serve
+
+# Serve the built frontend
+serve -s frontend/dist
+```
+
+You can also deploy to:
+- GitHub Pages
+- AWS S3 + CloudFront
+- Netlify
+- Any static file hosting service
+
+## 📱 Screenshots
 
 <p align="center">
   <i>Screenshots coming soon...</i>
@@ -147,25 +141,25 @@ To be added once available:
 - **Phase 2** 🚧 - Enhanced community features
   - Rich milestone templates and categories
   - Achievement badges and challenges
-  - Advanced profile customization
+  - Advanced profile customisation
 
 - **Phase 3** 🔮 - Ecosystem expansion
   - Integration with other personal development platforms
-  - Organization accounts for recognizing member achievements
+  - Organisation accounts for recognising member achievements
   - Mobile application with push notifications
 
 - **Phase 4** 🔮 - Growth and partnerships
   - Integration with education platforms for verified credentials
-  - Community development programs
+  - Community development programmes
   - Advanced analytics and progress tracking
 
 ## 👥 Team
 
 - **Angelina Aziz** - Founder & Developer - [GitHub](https://github.com/angelinaaziz) | [Twitter](https://twitter.com/angelinaaziz)
 
-## 📄 License
+## 📄 Licence
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT Licence - see the [LICENCE](LICENSE) file for details.
 
 ## 🙏 Acknowledgements
 

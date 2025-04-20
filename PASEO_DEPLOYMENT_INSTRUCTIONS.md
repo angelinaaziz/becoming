@@ -36,12 +36,9 @@ Once the network connectivity issues are resolved, follow these steps to deploy 
      VITE_WS_PROVIDER=wss://paseo-asset-hub-rpc.polkadot.io
      ```
 
-4. **Run the Frontend**:
-   ```bash
-   cd frontend
-   npm install  # If not already installed
-   npm run dev
-   ```
+4. **Deploy the Frontend**:
+   - See the `FRONTEND_DEPLOYMENT.md` file for detailed instructions on different deployment options
+   - You can choose to deploy locally, to GitHub Pages, Netlify, or AWS S3 depending on your needs
 
 ## Alternative Deployment Method
 
