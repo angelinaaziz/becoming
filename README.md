@@ -110,25 +110,18 @@ You can also deploy to:
 
 ## 📱 Screenshots
 
-### Journey Page - Track Your Growth
-![Journey Page](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/journey-page.png)
-*Your personal journey dashboard showing your current level, milestone count, and progress tracker.*
-
 ### Mint Page - Begin Your Journey
-![Mint Page](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/mint-page.png)
-*The starting point where users can mint their soul-bound NFT and begin their personal growth journey.*
+![Journey Page](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/journey-page.png)
+*The starting point where users connect their wallet and  can mint their soul-bound NFT and begin their personal growth journey.*
+
 
 ### Add Milestone - Document Your Achievements
-![Add Milestone](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/add-milestone.png)
+![Celebration Page](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/celebration-page.png)
 *Add new milestones with title, description, and verification proof to evolve your avatar.*
 
-### Profile Page - Share Your Journey
+### Profile Page - Track Your Journey
 ![Profile Page](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/profile-page.png)
 *Public profile page showcasing your journey and achievements to inspire others.*
-
-### Celebration Page - Achievement Unlocked
-![Celebration Page](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/celebration-page.png)
-*A celebration animation when you reach a new evolution level in your journey.*
 
 ## 🗺️ Roadmap
 
