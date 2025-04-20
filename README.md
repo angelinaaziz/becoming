@@ -4,10 +4,14 @@ A soul-bound NFT that evolves as you achieve personal milestones.
 
 **Polkadot** · **ink!** · **React** · **Tailwind**
 
-## 🚀 Demo
-[Live Demo](https://becoming.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen)](https://becoming.vercel.app)
+[![GitHub Repo](https://img.shields.io/badge/Repo-GitHub-blue)](https://github.com/angelinaaziz/becoming)
 
-[GitHub Repository](https://github.com/angelinaaziz/becoming)
+---
+
+## What is Becoming?
+
+Becoming is a decentralized application that transforms personal growth into a visual journey through soul-bound NFTs that evolve with each milestone. Unlike traditional NFTs that are primarily used for trading or collecting, Becoming NFTs are tied to your identity and create a permanent, verifiable record of your achievements. Our platform empowers users to document their personal growth, build a community of support, and celebrate meaningful accomplishments.
 
 ## 🌟 The Problem & Solution
 
@@ -36,7 +40,7 @@ Becoming transforms personal development into a visual journey through a soul-bo
 - 💰 **Tipping System**: Receive tips for inspiring achievements
 - 👥 **Public Profiles**: View others' journeys for inspiration
 
-## 🏗️ Architecture
+## 🏗️ Technical Architecture
 
 **Becoming** is built on a modern tech stack:
 
@@ -45,6 +49,10 @@ Becoming transforms personal development into a visual journey through a soul-bo
 - **Blockchain**: Deployed on Polkadot's Asset Hub (Paseo Testnet)
 - **Storage**: Milestone proofs are hashed and referenced on-chain
 - **Authentication**: Polkadot.js wallet extension for secure account management
+- **Contract Design**: Custom NFT implementation with soul-bound properties and milestone tracking
+- **State Management**: Context API and custom hooks for contract interactions
+
+<!-- Add technical architecture diagram here once available -->
 
 ## 💫 Why Polkadot
 
@@ -64,8 +72,8 @@ git clone https://github.com/angelinaaziz/becoming.git
 cd becoming
 
 # Build and deploy the contract to Paseo testnet
-chmod +x ./deploy-paseo.sh
-./deploy-paseo.sh
+chmod +x ./deploy.sh
+./deploy.sh
 ```
 
 ### Frontend Development
@@ -101,7 +109,26 @@ You can also deploy to:
 - Any static file hosting service
 
 ## 📱 Screenshots
-Screenshots coming soon...
+
+### Journey Page - Track Your Growth
+![Journey Page](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/journey-page.png)
+*Your personal journey dashboard showing your current level, milestone count, and progress tracker.*
+
+### Mint Page - Begin Your Journey
+![Mint Page](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/mint-page.png)
+*The starting point where users can mint their soul-bound NFT and begin their personal growth journey.*
+
+### Add Milestone - Document Your Achievements
+![Add Milestone](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/add-milestone.png)
+*Add new milestones with title, description, and verification proof to evolve your avatar.*
+
+### Profile Page - Share Your Journey
+![Profile Page](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/profile-page.png)
+*Public profile page showcasing your journey and achievements to inspire others.*
+
+### Celebration Page - Achievement Unlocked
+![Celebration Page](https://raw.githubusercontent.com/angelinaaziz/becoming/main/frontend/public/assets/screenshots/celebration-page.png)
+*A celebration animation when you reach a new evolution level in your journey.*
 
 ## 🗺️ Roadmap
 
