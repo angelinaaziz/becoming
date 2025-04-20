@@ -12,12 +12,9 @@ echo "This script will build and deploy the contract to Paseo Asset Hub."
 echo
 
 # Check if seed phrase is provided
-if [ -z "$1" ]; then
-  echo -e "${YELLOW}No seed phrase provided. Using development account //Alice.${NC}"
-  SEED="//Alice"
-else
-  SEED="$1"
-  echo -e "${GREEN}Using provided seed phrase.${NC}"
+if [ -z "$SEED_PHRASE" ]; then
+  echo -e "${YELLOW}No seed phrase provided. Using Angelina's account //Alice.${NC}"
+  SEED_PHRASE="//Alice"
 fi
 
 # Define Paseo Asset Hub endpoint
@@ -41,7 +38,7 @@ echo -e "${GREEN}Contract built successfully.${NC}"
 echo "Uploading contract code to Paseo Asset Hub..."
 echo "Using endpoint: $PASEO_ENDPOINT"
 
-UPLOAD_RESULT=$(cargo contract upload --url "$PASEO_ENDPOINT" --suri "$SEED" --skip-confirm ./target/ink/becoming.wasm 2>&1)
+UPLOAD_RESULT=$(cargo contract upload --url "$PASEO_ENDPOINT" --suri "$SEED_PHRASE" --skip-confirm ./target/ink/becoming.wasm 2>&1)
 
 if echo "$UPLOAD_RESULT" | grep -q "Error"; then
   echo -e "${RED}Error during contract upload:${NC}"
@@ -63,7 +60,7 @@ echo -e "${GREEN}Contract code uploaded with hash: $CODE_HASH${NC}"
 
 # Instantiate the contract
 echo "Instantiating contract..."
-INSTANTIATE_RESULT=$(cargo contract instantiate --url "$PASEO_ENDPOINT" --suri "$SEED" \
+INSTANTIATE_RESULT=$(cargo contract instantiate --url "$PASEO_ENDPOINT" --suri "$SEED_PHRASE" \
   --constructor new --args "Becoming NFT" "BNFT" \
   --skip-confirm 2>&1)
 

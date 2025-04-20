@@ -74,7 +74,7 @@ export const useContract = () => {
     // Store auto-mint preference for development account
     if (enableAutoMint) {
       localStorage.setItem('becoming_dev_auto_mint', 'true');
-      debug('Development account auto-mint enabled');
+      debug('Angelina account auto-mint enabled');
     } else {
       localStorage.removeItem('becoming_dev_auto_mint');
     }
@@ -141,12 +141,12 @@ export const useContract = () => {
         const mockAccounts = [
           {
             address: '5GrwvaEF5zXb26Fz9rcQpDWS57CtERHpNehXCPcNoHGKutQY',
-            meta: { name: 'Angelina', source: 'polkadot-js' },
+            meta: { name: 'Alice', source: 'polkadot-js' },
             signer: { signRaw: async () => ({ signature: '0x123456' }) }
           },
           {
             address: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
-            meta: { name: 'Development Account', source: 'polkadot-js' },
+            meta: { name: 'Angelina', source: 'polkadot-js' },
             signer: { signRaw: async () => ({ signature: '0x654321' }) }
           }
         ];
@@ -163,6 +163,21 @@ export const useContract = () => {
       }
     }
   }, [mockMode]);
+  
+  // Add auto-mint functionality for mock mode
+  useEffect(() => {
+    if (mockMode && selectedAccount && !isMinted && !isMinting && hasMintCheck) {
+      // Auto-mint for all users in mock mode after a short delay
+      debug('Auto-minting NFT in mock mode for account:', selectedAccount.address);
+      const timer = setTimeout(() => {
+        mintNFT().catch(err => {
+          debug('Auto-mint failed:', err);
+        });
+      }, 1000);
+      
+      return () => clearTimeout(timer);
+    }
+  }, [mockMode, selectedAccount, isMinted, isMinting, hasMintCheck]);
   
   // Initialize minted status from localStorage
   const [isMinted, setIsMinted] = useState<boolean>(() => {
@@ -364,7 +379,7 @@ export const useContract = () => {
           },
           {
             address: '5FHneW46xGXgs5mUiveU4sbTyGBzmstUspZC92UhjJM694ty',
-            meta: { name: 'Development Account', source: 'polkadot-js' },
+            meta: { name: 'Angelina', source: 'polkadot-js' },
             signer: { signRaw: async () => ({ signature: '0x654321' }) }
           }
         ];
@@ -602,10 +617,10 @@ export const useContract = () => {
     
     if (enable) {
       localStorage.setItem('becoming_dev_auto_mint', 'true');
-      debug('Development account auto-mint enabled');
+      debug('Angelina account auto-mint enabled');
     } else {
       localStorage.removeItem('becoming_dev_auto_mint');
-      debug('Development account auto-mint disabled');
+      debug('Angelina account auto-mint disabled');
     }
     return true;
   };
@@ -633,7 +648,7 @@ export const useContract = () => {
         debug('Starting mint process for account:', selectedAccount.address);
         
         // Check if this is the development account and if mint is already done
-        const isDevelopmentAccount = selectedAccount.meta.name === 'Development Account';
+        const isDevelopmentAccount = selectedAccount.meta.name === 'Angelina';
         const alreadyMinted = localStorage.getItem(STORAGE_KEYS.MINTED) === 'true';
         const autoMintEnabled = localStorage.getItem('becoming_dev_auto_mint') === 'true';
         
@@ -646,14 +661,14 @@ export const useContract = () => {
         
         if (alreadyMinted && isDevelopmentAccount && !autoMintEnabled) {
           // Development account with auto-mint disabled
-          debug('Development account has already minted and auto-mint is not enabled');
+          debug('Angelina account has already minted and auto-mint is not enabled');
           setIsMinting(false);
-          throw new Error('Development account has already minted. Reset state or enable auto-mint to mint again.');
+          throw new Error('Angelina account has already minted. Reset state or enable auto-mint to mint again.');
         }
         
         // If we get here, either:
         // 1. Account hasn't minted yet
-        // 2. It's the development account with auto-mint enabled
+        // 2. It's the Angelina account with auto-mint enabled
         
         // Add more realistic delays and steps to simulate a real transaction
         await delay(500); // Simulate wallet connection check

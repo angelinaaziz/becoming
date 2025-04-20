@@ -42,17 +42,14 @@ const JourneyPage = () => {
   
   // Monitor development account minting status for changes
   useEffect(() => {
-    if (mockMode && selectedAccount?.meta?.name === 'Development Account') {
+    if (mockMode && selectedAccount?.meta?.name === 'Angelina') {
       // Get the milestones key for the development account
-      const mockMilestonesKey = `becoming_milestones_${selectedAccount.address}`;
+      const watchKey = `${STORAGE_KEYS.MILESTONES_PREFIX}${selectedAccount.address}`;
       
-      // Create a function to check if we need to reload data
       const handleStorageChange = (e) => {
-        // If the milestones storage was changed externally (e.g., after a re-mint)
-        if (e.key === mockMilestonesKey || e.key === 'becoming_nft_minted') {
+        if (e.key === watchKey) {
           console.log('JourneyPage: Development account storage changed, reloading data');
-          // Reload milestone data
-          loadData();
+          loadMilestones();
         }
       };
       
