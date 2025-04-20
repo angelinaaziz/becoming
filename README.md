@@ -3,11 +3,20 @@
 A soul-bound NFT that evolves as you achieve personal milestones.
 
 <p align="center">
-  <img alt="Polkadot" src="https://img.shields.io/badge/Polkadot-Black?logo=polkadot&logoColor=white" />&nbsp;
-  <img alt="ink!"      src="https://img.shields.io/badge/ink!-Rust-orange?logo=rust"            />&nbsp;
-  <img alt="React"     src="https://img.shields.io/badge/React-17.0.2-61dafb?logo=react&logoColor=white" />&nbsp;
-  <img alt="Tailwind"  src="https://img.shields.io/badge/Tailwind-3.0-38B2AC?logo=tailwindcss&logoColor=white" />
+  <a href="https://polkadot.network/" target="_blank">
+    <img alt="Polkadot" src="https://img.shields.io/badge/Polkadot-Black?logo=polkadot&logoColor=white" />
+  </a>&nbsp;
+  <a href="https://use.ink/" target="_blank">
+    <img alt="ink!" src="https://img.shields.io/badge/ink!-Rust-orange?logo=rust" />
+  </a>&nbsp;
+  <a href="https://reactjs.org/" target="_blank">
+    <img alt="React" src="https://img.shields.io/badge/React-17.0.2-61dafb?logo=react&logoColor=white" />
+  </a>&nbsp;
+  <a href="https://tailwindcss.com/" target="_blank">
+    <img alt="Tailwind" src="https://img.shields.io/badge/Tailwind-3.0-38B2AC?logo=tailwindcss&logoColor=white" />
+  </a>
 </p>
+
 
 <div>
     <a href="https://www.loom.com/share/a362f109d0c445eeafa7aa2309b29d39">
