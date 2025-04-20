@@ -12,7 +12,7 @@ A soul-bound NFT that evolves as you achieve personal milestones.
 ## 🌟 The Problem & Solution
 
 ### Problem
-Personal growth and achievements often go unrecorded, making it hard to visualize progress and document significant milestones in one's journey. Traditional methods lack the permanence and visual evolution that truly showcase personal development.
+Personal growth and achievements often go unrecorded, making it hard to visualise progress and document significant milestones in one's journey. Traditional methods lack the permanence and visual evolution that truly showcase personal development.
 
 ### Solution
 Becoming transforms personal development into a visual journey through a soul-bound NFT that evolves with each milestone. Unlike traditional NFTs, Becoming NFTs:
@@ -20,7 +20,7 @@ Becoming transforms personal development into a visual journey through a soul-bo
 - Are tied to your identity (non-transferable)
 - Evolve visually as you add milestones
 - Create a permanent, verifiable record of achievements
-- Build a community where achievements are recognized and celebrated
+- Build a community where achievements are recognised and celebrated
 
 ## ✨ Features
 
@@ -30,7 +30,7 @@ Becoming transforms personal development into a visual journey through a soul-bo
 
 - 🔒 **Soul-bound NFT**: Non-transferable, tied to your identity
 - 🎨 **Visual Evolution**: Your avatar evolves through four distinct stages
-- 📚 **Milestone Management**: Add, categorize, and display your achievements
+- 📚 **Milestone Management**: Add, categorise, and display your achievements
 - 🔍 **Verifiable Proofs**: Link evidence of achievements with blockchain timestamping
 - 🎉 **Achievement Sharing**: Share milestones with your community
 - 💰 **Tipping System**: Receive tips for inspiring achievements
@@ -117,7 +117,7 @@ Screenshots coming soon...
 
 **Phase 3 🔮** - Ecosystem expansion
 - Integration with other personal development platforms
-- Organisation accounts for recognizing member achievements
+- Organisation accounts for recognising member achievements
 - Mobile application with push notifications
 
 **Phase 4 🔮** - Growth and partnerships
