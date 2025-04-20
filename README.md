@@ -11,6 +11,7 @@ A soul-bound NFT that evolves as you achieve personal milestones.
 
 <div>
     <a href="https://www.loom.com/share/a362f109d0c445eeafa7aa2309b29d39">
+      <p>Watch THe Demo Video Here</p>
     </a>
     <a href="https://www.loom.com/share/a362f109d0c445eeafa7aa2309b29d39">
       <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/a362f109d0c445eeafa7aa2309b29d39-16a3f69e66dfdf14-full-play.gif">
