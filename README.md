@@ -2,7 +2,13 @@
 
 A soul-bound NFT that evolves as you achieve personal milestones.
 
-**Polkadot** · **ink!** · **React** · **Tailwind**
+<p align="center">
+  <img alt="Polkadot" src="https://img.shields.io/badge/Polkadot-Black?logo=polkadot&logoColor=white" />&nbsp;
+  <img alt="ink!"      src="https://img.shields.io/badge/ink!-Rust-orange?logo=rust"            />&nbsp;
+  <img alt="React"     src="https://img.shields.io/badge/React-17.0.2-61dafb?logo=react&logoColor=white" />&nbsp;
+  <img alt="Tailwind"  src="https://img.shields.io/badge/Tailwind-3.0-38B2AC?logo=tailwindcss&logoColor=white" />
+</p>
+
 
 [![Live Demo](https://img.shields.io/badge/Demo-Live-brightgreen)](https://becoming.vercel.app)
 [![GitHub Repo](https://img.shields.io/badge/Repo-GitHub-blue)](https://github.com/angelinaaziz/becoming)
