@@ -11,7 +11,6 @@ A soul-bound NFT that evolves as you achieve personal milestones.
 
 [![Watch the Demo](https://cdn.loom.com/sessions/thumbnails/a362f109d0c445eeafa7aa2309b29d39-with-play.gif)](https://www.loom.com/share/a362f109d0c445eeafa7aa2309b29d39)
 
-
 [![GitHub Repo](https://img.shields.io/badge/Repo-GitHub-blue)](https://github.com/angelinaaziz/becoming)
 
 ---
