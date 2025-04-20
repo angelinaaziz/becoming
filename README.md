@@ -9,11 +9,13 @@ A soul-bound NFT that evolves as you achieve personal milestones.
   <img alt="Tailwind"  src="https://img.shields.io/badge/Tailwind-3.0-38B2AC?logo=tailwindcss&logoColor=white" />
 </p>
 
-<p align="center">
-  <a href="https://www.loom.com/share/a362f109d0c445eeafa7aa2309b29d39" target="_blank">
-    <img src="https://cdn.loom.com/sessions/thumbnails/a362f109d0c445eeafa7aa2309b29d39-with-play.gif" alt="Watch the demo" style="width: 60%; border-radius: 8px;"/>
-  </a>
-</p>
+<div>
+    <a href="https://www.loom.com/share/a362f109d0c445eeafa7aa2309b29d39">
+    </a>
+    <a href="https://www.loom.com/share/a362f109d0c445eeafa7aa2309b29d39">
+      <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/a362f109d0c445eeafa7aa2309b29d39-16a3f69e66dfdf14-full-play.gif">
+    </a>
+  </div>
 
 [![GitHub Repo](https://img.shields.io/badge/Repo-GitHub-blue)](https://github.com/angelinaaziz/becoming)
 
