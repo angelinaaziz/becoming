@@ -128,8 +128,6 @@ Screenshots coming soon...
 ## 👥 Team
 Angelina Aziz - Founder & Developer - [Website](https://www.angelina.dev/) | [LinkedIn](https://www.linkedin.com/in/angelinaaziz) | [Twitter](https://twitter.com/angelinaaziz) | [GitHub](https://github.com/angelinaaziz) | [Instagram](https://www.instagram.com/angelinaaziz) | [TikTok](https://www.tiktok.com/@angelinaaziz) | [Blog](https://www.angelina.dev/blog)
 
-## 📄 License
-This project is licensed under the MIT License - see the LICENSE file for details.
 
 ## 🙏 Acknowledgements
 - Polkadot ecosystem and community
