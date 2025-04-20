@@ -30,7 +30,7 @@ A soul-bound NFT that evolves as you achieve personal milestones.
 ## Nerdy Technical Video
 <div>
     <a href="https://www.loom.com/share/f7f0fcbb653444d8aa8a230a97399533">
-      <p>Technical Overview of Our Project 🚀 - Watch Video</p>
+      <p></p>
     </a>
     <a href="https://www.loom.com/share/f7f0fcbb653444d8aa8a230a97399533">
       <img style="max-width:300px;" src="https://cdn.loom.com/sessions/thumbnails/f7f0fcbb653444d8aa8a230a97399533-eba5bf919e363f76-full-play.gif">
